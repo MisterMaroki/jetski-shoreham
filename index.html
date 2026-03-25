@@ -343,12 +343,10 @@
             background: var(--coral);
             color: var(--deep);
             font-weight: 700;
-            box-shadow: 0 2px 12px rgba(255, 208, 0, 0.12);
         }
         .btn-primary:hover {
             background: var(--coral-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 16px rgba(255, 208, 0, 0.15);
+            transform: translateY(-1px);
         }
         .btn-secondary {
             background: rgba(255,255,255,0.08);
@@ -365,12 +363,10 @@
             background: var(--cyan);
             color: var(--deep);
             font-weight: 700;
-            box-shadow: 0 2px 10px rgba(255, 208, 0, 0.1);
         }
         .btn-cyan:hover {
             background: var(--cyan-bright);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 16px rgba(255, 208, 0, 0.15);
+            transform: translateY(-1px);
         }
 
         /* Hero floating stats */
@@ -1099,7 +1095,7 @@
             right: -200px;
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle, rgba(255, 90, 54, 0.06), transparent 70%);
+            background: radial-gradient(circle, rgba(255, 208, 0, 0.02), transparent 70%);
             pointer-events: none;
         }
         .contact-layout {
@@ -1347,7 +1343,7 @@
             position: fixed;
             inset: 0;
             z-index: 2000;
-            background: rgba(7, 13, 26, 0.97);
+            background: rgba(10, 10, 10, 0.97);
             backdrop-filter: blur(30px);
             -webkit-backdrop-filter: blur(30px);
             display: flex;
@@ -1599,9 +1595,9 @@
             align-items: center;
             gap: 8px;
             transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 4px 20px rgba(255, 90, 54, 0.3);
+            box-shadow: none;
         }
-        .eq-btn-next:hover { background: var(--coral-hover); transform: translateY(-2px); box-shadow: 0 4px 14px rgba(255, 208, 0, 0.12); }
+        .eq-btn-next:hover { background: var(--coral-hover); transform: translateY(-1px); box-shadow: none; }
         .eq-btn-next svg { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
 
         /* Success state */
