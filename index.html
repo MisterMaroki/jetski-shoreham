@@ -769,195 +769,176 @@
             color: var(--mist);
         }
 
-        /* ===== RESOURCES ===== */
-        .resources {
+        /* ===== PRO BAND (Resources + Finance + Stats) ===== */
+        .pro-band {
             background: var(--navy);
-            padding: 80px 0;
-        }
-        .resources-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-        }
-        .resource-card {
-            display: flex;
-            align-items: center;
-            gap: 24px;
-            background: linear-gradient(145deg, var(--slate), var(--storm));
-            border: 1px solid rgba(255,255,255,0.06);
-            border-radius: 18px;
-            padding: 32px;
-            text-decoration: none;
-            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            padding: 80px 0 100px;
             position: relative;
-            overflow: hidden;
         }
-        .resource-card::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, rgba(255, 208, 0, 0.04), transparent);
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .resource-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(255, 208, 0, 0.2);
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-        }
-        .resource-card:hover::before { opacity: 1; }
-        .resource-icon {
-            width: 64px;
-            height: 64px;
-            min-width: 64px;
-            background: rgba(255, 208, 0, 0.08);
-            border: 1px solid rgba(255, 208, 0, 0.15);
-            border-radius: 16px;
+        .pro-stats {
             display: flex;
             align-items: center;
             justify-content: center;
+            margin-bottom: 64px;
+            padding: 40px 0;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
         }
-        .resource-content { flex: 1; }
-        .resource-content h3 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 6px;
-        }
-        .resource-content p {
-            font-size: 0.88rem;
-            color: var(--mist);
-            line-height: 1.5;
-        }
-        .resource-arrow {
-            color: var(--mist);
-            transition: all 0.3s;
-            min-width: 20px;
-        }
-        .resource-card:hover .resource-arrow {
-            color: var(--cyan);
-            transform: translateX(4px);
-        }
-
-        /* ===== FINANCE BANNER ===== */
-        .finance-banner {
-            background: var(--deep);
-            padding: 0;
-        }
-        .finance-inner {
-            background: linear-gradient(135deg, #ec0000, #cc0000);
-            border-radius: 24px;
-            padding: 48px 56px;
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            position: relative;
-            overflow: hidden;
-        }
-        .finance-inner::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -10%;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(255,255,255,0.08), transparent 70%);
-            pointer-events: none;
-        }
-        .finance-left {
-            min-width: 180px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .finance-logo {
-            height: 60px;
-            width: auto;
-        }
-        .finance-divider {
-            width: 3px;
-            height: 80px;
-            background: rgba(255,255,255,0.25);
-            border-radius: 2px;
-        }
-        .finance-right { flex: 1; position: relative; z-index: 1; }
-        .finance-right h3 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: white;
-            margin-bottom: 8px;
-            letter-spacing: -0.01em;
-        }
-        .finance-right p {
-            color: rgba(255,255,255,0.85);
-            font-size: 1rem;
-            line-height: 1.6;
-        }
-        .finance-right .btn-primary {
-            background: white;
-            color: #cc0000;
-            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
-        }
-        .finance-right .btn-primary:hover {
-            background: #f0f0f0;
-            color: #cc0000;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
-        }
-        .finance-right .btn-primary svg { stroke: #cc0000; }
-        .finance-right .btn-primary { font-weight: 700; }
-
-        @media (max-width: 768px) {
-            .resources-grid { grid-template-columns: 1fr; }
-            .finance-inner {
-                flex-direction: column;
-                padding: 32px 28px;
-                text-align: center;
-                gap: 24px;
-            }
-            .finance-divider { width: 60px; height: 3px; }
-            .finance-right h3 { font-size: 1.4rem; }
-        }
-
-        /* ===== STATS BAR ===== */
-        .stats-bar {
-            background: linear-gradient(135deg, var(--slate), var(--storm));
-            border-top: 1px solid rgba(255, 208, 0, 0.08);
-            border-bottom: 1px solid rgba(255, 208, 0, 0.08);
-            padding: 60px 0;
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 32px;
+        .pro-stat {
+            flex: 1;
             text-align: center;
+            padding: 0 24px;
         }
-        .stat-item { position: relative; }
-        .stat-item:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            right: -16px;
-            top: 15%;
-            height: 70%;
-            width: 1px;
-            background: rgba(255,255,255,0.08);
-        }
-        .stat-number {
+        .pro-stat-num {
             font-family: 'Outfit', sans-serif;
-            font-size: 2.8rem;
+            font-size: clamp(2.2rem, 3.5vw, 3.2rem);
             font-weight: 800;
             color: white;
             line-height: 1;
             margin-bottom: 8px;
+            letter-spacing: -0.02em;
         }
-        .stat-number .cyan { color: var(--cyan); }
-        .stat-label {
-            font-size: 0.85rem;
+        .pro-stat-num span { color: var(--cyan); }
+        .pro-stat-label {
+            font-size: 0.72rem;
             color: var(--mist);
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.1em;
+            font-weight: 500;
+        }
+        .pro-stat-divider {
+            width: 1px;
+            height: 48px;
+            background: rgba(255,255,255,0.08);
+            flex-shrink: 0;
+        }
+        .pro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        .pro-card {
+            background: var(--slate);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 36px 32px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .pro-card:hover {
+            border-color: rgba(255, 208, 0, 0.15);
+            transform: translateY(-3px);
+        }
+        .pro-card-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: var(--cyan);
+            letter-spacing: 0.12em;
+            margin-bottom: 20px;
+            opacity: 0.7;
+        }
+        .pro-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .pro-card p {
+            font-size: 0.88rem;
+            color: var(--mist);
+            line-height: 1.6;
+            flex: 1;
+        }
+        .pro-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--cyan);
+            margin-top: 20px;
+            transition: gap 0.2s;
+        }
+        .pro-card:hover .pro-card-link { gap: 10px; }
+        .pro-card-finance {
+            background: none;
+            border: none;
+            padding: 0;
+        }
+        .pro-card-finance:hover { transform: none; }
+        .pro-card-finance-inner {
+            background: linear-gradient(145deg, #d40000, #b30000);
+            border-radius: 16px;
+            padding: 36px 32px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+        }
+        .pro-card-finance-inner::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -20%;
+            width: 240px;
+            height: 240px;
+            background: radial-gradient(circle, rgba(255,255,255,0.06), transparent 70%);
+            pointer-events: none;
+        }
+        .pro-finance-logo {
+            height: 32px;
+            width: auto;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        .pro-card-finance-inner h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+        }
+        .pro-card-finance-inner p {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.55;
+            flex: 1;
+        }
+        .pro-finance-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+            padding: 11px 22px;
+            background: white;
+            color: #b30000;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 700;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.2s;
+            align-self: flex-start;
+        }
+        .pro-finance-btn svg { stroke: #b30000; }
+        .pro-finance-btn:hover { background: #f0f0f0; transform: translateY(-1px); }
+
+        @media (max-width: 1024px) {
+            .pro-grid { grid-template-columns: 1fr 1fr; }
+            .pro-card-finance { grid-column: 1 / -1; }
+        }
+        @media (max-width: 768px) {
+            .pro-stats { flex-wrap: wrap; gap: 24px; padding: 32px 0; }
+            .pro-stat-divider { display: none; }
+            .pro-stat { flex: 0 0 calc(50% - 12px); }
+            .pro-grid { grid-template-columns: 1fr; }
+            .pro-card-finance { grid-column: auto; }
+            .pro-band { padding: 60px 0 80px; }
         }
 
         /* ===== REQUIREMENTS ===== */
@@ -1898,81 +1879,66 @@
         </div>
     </section>
 
-    <!-- RESOURCES -->
-    <section class="resources" id="resources">
+    <!-- RESOURCES + FINANCE + STATS -->
+    <section class="pro-band" id="resources">
         <div class="container">
-            <div class="resources-grid">
-                <a href="https://catalogues.brp.com/sea-pwc-my26-consumercatalog-enus/full-view.html" target="_blank" rel="noopener" class="resource-card reveal">
-                    <div class="resource-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><line x1="12" y1="6" x2="12" y2="12"/><line x1="9" y1="9" x2="15" y2="9"/></svg>
-                    </div>
-                    <div class="resource-content">
-                        <h3>2026 Product Spec Book</h3>
-                        <p>Browse the full 2026 Sea-Doo lineup with specs, features, and colours.</p>
-                    </div>
-                    <div class="resource-arrow">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            <!-- Stats row -->
+            <div class="pro-stats reveal">
+                <div class="pro-stat">
+                    <div class="pro-stat-num">24<span>+</span></div>
+                    <div class="pro-stat-label">Years in Business</div>
+                </div>
+                <div class="pro-stat-divider"></div>
+                <div class="pro-stat">
+                    <div class="pro-stat-num">1000<span>s</span></div>
+                    <div class="pro-stat-label">Happy Riders</div>
+                </div>
+                <div class="pro-stat-divider"></div>
+                <div class="pro-stat">
+                    <div class="pro-stat-num">No.1</div>
+                    <div class="pro-stat-label">Sussex Sea-Doo Dealer</div>
+                </div>
+                <div class="pro-stat-divider"></div>
+                <div class="pro-stat">
+                    <div class="pro-stat-num">BRP</div>
+                    <div class="pro-stat-label">Award-Winning Dealer</div>
+                </div>
+            </div>
+
+            <!-- Resources + Finance grid -->
+            <div class="pro-grid">
+                <a href="https://catalogues.brp.com/sea-pwc-my26-consumercatalog-enus/full-view.html" target="_blank" rel="noopener" class="pro-card reveal">
+                    <div class="pro-card-number">01</div>
+                    <h3>2026 Spec Book</h3>
+                    <p>Full Sea-Doo lineup &mdash; specs, features, colours, and pricing for every 2026 model.</p>
+                    <div class="pro-card-link">
+                        View Catalogue
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
                     </div>
                 </a>
-                <a href="https://epc.brp.com/Index.aspx?aribrand=SEA_DOO_EN_US" target="_blank" rel="noopener" class="resource-card reveal reveal-delay-1">
-                    <div class="resource-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--cyan)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                    </div>
-                    <div class="resource-content">
-                        <h3>BRP Parts Catalog</h3>
-                        <p>Find your part online, then give us a call to order. Genuine Sea-Doo parts.</p>
-                    </div>
-                    <div class="resource-arrow">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                <a href="https://epc.brp.com/Index.aspx?aribrand=SEA_DOO_EN_US" target="_blank" rel="noopener" class="pro-card reveal reveal-delay-1">
+                    <div class="pro-card-number">02</div>
+                    <h3>BRP Parts Catalog</h3>
+                    <p>Find your exact part online using the official BRP system, then call us to order.</p>
+                    <div class="pro-card-link">
+                        Find Parts
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
                     </div>
                 </a>
+                <div class="pro-card pro-card-finance reveal reveal-delay-2">
+                    <div class="pro-card-finance-inner">
+                        <img src="https://lirp.cdn-website.com/13c28227/dms3rep/multi/opt/santander-financial-300w.png" alt="Santander Consumer Finance" class="pro-finance-logo">
+                        <h3>Finance Available</h3>
+                        <p>Spread the cost of any new or used Sea-Doo with flexible Santander Consumer Finance.</p>
+                        <a href="tel:01273596660" class="pro-finance-btn">
+                            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            Call for a Quote
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-
-    <!-- FINANCE BANNER -->
-    <section class="finance-banner">
-        <div class="container">
-            <div class="finance-inner reveal">
-                <div class="finance-left">
-                    <img src="https://lirp.cdn-website.com/13c28227/dms3rep/multi/opt/santander-financial-300w.png" alt="Santander Consumer Finance" class="finance-logo">
-                </div>
-                <div class="finance-divider"></div>
-                <div class="finance-right">
-                    <h3>Sea-Doo Finance Available</h3>
-                    <p>Spread the cost of your new Sea-Doo with flexible finance through Santander Consumer Finance.</p>
-                    <a href="tel:01273596660" class="btn btn-primary" style="margin-top: 16px;">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                        Call for a Quote
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- STATS BAR -->
-    <div class="stats-bar">
-        <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item reveal">
-                    <div class="stat-number">24<span class="cyan">+</span></div>
-                    <div class="stat-label">Years in Business</div>
-                </div>
-                <div class="stat-item reveal reveal-delay-1">
-                    <div class="stat-number">1000<span class="cyan">s</span></div>
-                    <div class="stat-label">Happy Riders</div>
-                </div>
-                <div class="stat-item reveal reveal-delay-2">
-                    <div class="stat-number">No.1</div>
-                    <div class="stat-label">Sussex Sea-Doo Dealer</div>
-                </div>
-                <div class="stat-item reveal reveal-delay-3">
-                    <div class="stat-number">BRP</div>
-                    <div class="stat-label">Award-Winning Dealer</div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- MODELS -->
     <section class="models" id="models">
