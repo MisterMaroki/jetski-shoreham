@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Used Sea-Doo Jet Skis for Sale | Sussex Marine Watersports Brighton</title>
+    <meta name="description" content="Quality pre-owned Sea-Doo jet skis, all serviced and checked by our team. Finance available. Based in Brighton, BN42 4DP. Call 01273 596660.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --deep: #0a0a0a;
+            --navy: #111111;
+            --slate: #1a1a1a;
+            --storm: #222222;
+            --mist: #999999;
+            --cloud: #cccccc;
+            --white: #f5f5f5;
+            --yellow: #ffd000;
+            --yellow-hover: #ffe040;
+            --yellow-glow: #ffd00018;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--deep);
+            color: var(--cloud);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+        /* ===== NAV ===== */
+        .nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 0 24px;
+            background: rgba(10, 10, 10, 0.92);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 208, 0, 0.06);
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 72px;
+        }
+        .nav-logo { text-decoration: none; }
+        .nav-logo img { height: 60px; width: auto; }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: var(--cloud);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-links a:hover { color: white; }
+        .nav-cta {
+            background: var(--yellow) !important;
+            color: var(--deep) !important;
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-weight: 700 !important;
+            font-size: 0.88rem !important;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s !important;
+        }
+        .nav-cta svg { stroke: var(--deep); }
+        .nav-cta:hover { background: var(--yellow-hover) !important; transform: translateY(-1px); }
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+        .menu-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: white;
+            margin: 6px 0;
+            transition: all 0.3s;
+            border-radius: 2px;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 140px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+        }
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.2) saturate(0.8);
+        }
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(10,10,10,0.5) 0%, rgba(10,10,10,0.3) 50%, var(--deep) 100%);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255, 208, 0, 0.08);
+            border: 1px solid rgba(255, 208, 0, 0.2);
+            border-radius: 100px;
+            padding: 8px 18px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--yellow);
+            margin-bottom: 24px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        .hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            color: white;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+        .hero h1 .accent { color: var(--yellow); }
+        .hero p {
+            font-size: 1.05rem;
+            color: var(--cloud);
+            line-height: 1.7;
+            margin-bottom: 32px;
+        }
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 10px;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+        }
+        .btn-primary {
+            background: var(--yellow);
+            color: var(--deep);
+            font-weight: 700;
+        }
+        .btn-primary:hover {
+            background: var(--yellow-hover);
+            transform: translateY(-2px);
+        }
+        .btn-outline {
+            background: rgba(255,255,255,0.06);
+            color: white;
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateY(-2px);
+        }
+
+        /* ===== TRUST BAR ===== */
+        .trust-bar {
+            background: var(--navy);
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            padding: 40px 0;
+        }
+        .trust-bar-inner {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--mist);
+            font-size: 0.88rem;
+            font-weight: 500;
+        }
+        .trust-item svg { stroke: var(--yellow); min-width: 20px; }
+
+        /* ===== LISTINGS ===== */
+        .listings { padding: 80px 0; }
+        .listings-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .section-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--yellow);
+            margin-bottom: 12px;
+        }
+        .section-label::before {
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: var(--yellow);
+        }
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 800;
+            color: white;
+            letter-spacing: -0.02em;
+            margin-bottom: 12px;
+        }
+        .section-desc {
+            font-size: 1rem;
+            color: var(--mist);
+            max-width: 560px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Filter bar */
+        .filter-bar {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        .filter-btn {
+            padding: 10px 20px;
+            background: var(--slate);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 8px;
+            color: var(--cloud);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: rgba(255, 208, 0, 0.08);
+            border-color: rgba(255, 208, 0, 0.2);
+            color: var(--yellow);
+        }
+
+        /* Listing grid */
+        .listings-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        .listing-card {
+            background: var(--navy);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .listing-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255, 208, 0, 0.15);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+        .listing-img {
+            height: 260px;
+            position: relative;
+            overflow: hidden;
+            background: var(--slate);
+        }
+        .listing-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .listing-card:hover .listing-img img {
+            transform: scale(1.04);
+        }
+        .listing-tag {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        .listing-tag-price {
+            background: var(--yellow);
+            color: var(--deep);
+        }
+        .listing-tag-hours {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: rgba(255,255,255,0.1);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.72rem;
+            font-weight: 600;
+            backdrop-filter: blur(8px);
+        }
+        .listing-body {
+            padding: 28px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .listing-body h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 6px;
+        }
+        .listing-body .listing-year {
+            font-size: 0.82rem;
+            color: var(--yellow);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .listing-includes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .listing-includes span {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 6px;
+            padding: 5px 10px;
+            font-size: 0.75rem;
+            color: var(--cloud);
+        }
+        .listing-includes span svg {
+            width: 12px;
+            height: 12px;
+            stroke: var(--yellow);
+        }
+        .listing-note {
+            font-size: 0.85rem;
+            color: var(--mist);
+            line-height: 1.5;
+            margin-bottom: 20px;
+            flex: 1;
+        }
+        .listing-footer {
+            display: flex;
+            gap: 10px;
+        }
+        .listing-footer .btn {
+            flex: 1;
+            justify-content: center;
+            padding: 12px 16px;
+            font-size: 0.88rem;
+        }
+
+        /* ===== BROKERAGE INFO ===== */
+        .brokerage-info {
+            background: var(--navy);
+            padding: 80px 0;
+        }
+        .brokerage-card {
+            background: var(--slate);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 20px;
+            padding: 48px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+        .brokerage-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 16px;
+        }
+        .brokerage-card h3 em {
+            font-style: normal;
+            color: var(--yellow);
+        }
+        .brokerage-card p {
+            color: var(--mist);
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+        .brokerage-points {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 24px;
+        }
+        .brokerage-point {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+        }
+        .brokerage-point-icon {
+            width: 32px;
+            height: 32px;
+            min-width: 32px;
+            background: rgba(255, 208, 0, 0.08);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .brokerage-point-icon svg {
+            width: 16px;
+            height: 16px;
+            stroke: var(--yellow);
+            fill: none;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        .brokerage-point p {
+            font-size: 0.9rem;
+            color: var(--cloud);
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Finance CTA */
+        .finance-strip {
+            background: linear-gradient(135deg, #ec0000, #cc0000);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .finance-strip::before {
+            content: '';
+            position: absolute;
+            top: -40%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(255,255,255,0.06), transparent 70%);
+            pointer-events: none;
+        }
+        .finance-strip h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 8px;
+        }
+        .finance-strip p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 20px;
+        }
+        .finance-strip .btn-primary {
+            background: white;
+            color: #cc0000;
+        }
+        .finance-strip .btn-primary:hover {
+            background: #f0f0f0;
+            color: #cc0000;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--deep);
+            padding: 48px 0 24px;
+            border-top: 1px solid rgba(255,255,255,0.04);
+        }
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        .footer-left img { height: 40px; width: auto; }
+        .footer-left span { color: var(--mist); font-size: 0.82rem; }
+        .footer-right {
+            display: flex;
+            gap: 24px;
+        }
+        .footer-right a {
+            color: var(--mist);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s;
+        }
+        .footer-right a:hover { color: var(--yellow); }
+
+        /* ===== ANIMATIONS ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .menu-toggle { display: block; }
+            .listings-grid { grid-template-columns: 1fr; }
+            .brokerage-card { grid-template-columns: 1fr; padding: 32px 24px; }
+            .hero { padding: 120px 0 60px; }
+            .listing-img { height: 200px; }
+            .hero-actions { flex-direction: column; }
+            .hero-actions .btn { width: 100%; justify-content: center; }
+            .trust-bar-inner { gap: 24px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">
+                <img src="https://lirp-cdn.multiscreensite.com/13c28227/dms3rep/multi/opt/sussex+marine+logo+final+logo+positive+cs2+copy-b5380e38-1280w.png" alt="Sussex Marine Watersports" style="height:60px; width:auto;">
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#models">Sea-Doo</a></li>
+                <li><a href="used.html" style="color:var(--yellow);">Used Stock</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="tel:01273596660" class="nav-cta">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    01273 596660
+                </a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="https://lirp.cdn-website.com/13c28227/dms3rep/multi/opt/PWC+family_2J8A7808_MY18-dd09c2ce-2880w.jpg" alt="Used Sea-Doo jet skis" loading="eager">
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">Pre-Owned &amp; Brokerage</div>
+            <h1>Quality Used <span class="accent">Sea-Doos</span></h1>
+            <p>Every ski we sell has been serviced by our team. All open to offers, all come with cover and trailer. Finance available on new and used.</p>
+            <div class="hero-actions">
+                <a href="tel:01273596660" class="btn btn-primary">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    Call to Enquire
+                </a>
+                <a href="#listings" class="btn btn-outline">View Stock Below</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST BAR -->
+    <div class="trust-bar">
+        <div class="container">
+            <div class="trust-bar-inner">
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    Serviced &amp; Checked by Us
+                </div>
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                    Finance Available
+                </div>
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    Cover &amp; Trailer Included
+                </div>
+                <div class="trust-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                    Open to Offers
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- LISTINGS -->
+    <section class="listings" id="listings">
+        <div class="container">
+            <div class="listings-header reveal">
+                <div class="section-label">Current Stock</div>
+                <h2 class="section-title">Available Now</h2>
+                <p class="section-desc">All skis are known to us and serviced by our team. Sold as seen/tested. Prices include cover and SBS roller trailer.</p>
+            </div>
+
+            <div class="filter-bar reveal">
+                <button class="filter-btn active" onclick="filterAll(this)">All Models</button>
+                <button class="filter-btn" onclick="filterAll(this)">Performance</button>
+                <button class="filter-btn" onclick="filterAll(this)">Recreation</button>
+                <button class="filter-btn" onclick="filterAll(this)">Entry Level</button>
+            </div>
+
+            <div class="listings-grid">
+
+                <!-- Listing 1 -->
+                <div class="listing-card reveal">
+                    <div class="listing-img">
+                        <img src="https://lirp.cdn-website.com/13c28227/dms3rep/multi/opt/GTI+3-d3198acf-1920w.jpg" alt="Sea-Doo GTI 130HP 2023" loading="lazy">
+                        <span class="listing-tag listing-tag-price">&pound;7,995</span>
+                        <span class="listing-tag-hours">266 hrs</span>
+                    </div>
+                    <div class="listing-body">
+                        <h3>Sea-Doo GTI 130HP</h3>
+                        <div class="listing-year">2023 &bull; Ref: AH1381</div>
+                        <div class="listing-includes">
+                            <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Cover</span>
+                            <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> SBS 750 Trailer</span>
+                            <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Immaculate</span>
+                        </div>
+                        <p class="listing-note">High hours but immaculate condition and very well looked after. Amazing price &mdash; no offers on this one.</p>
+                        <div class="listing-footer">
+                            <a href="tel:01273596660" class="btn btn-primary">Call to Enquire</a>
+                            <a href="tel:07780708311" class="btn btn-outline">07780 708311</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listing 2 -->
+                <div class="listing-card reveal reveal-delay-1">
+                    <div class="listing-img">
+                        <img src="https://lirp.cdn-website.com/13c28227/dms3rep/multi/opt/RXPX+325+AH+2424-1920w.jpg" alt="Sea-Doo RXP-X 325HP 2024" loading="lazy">
+                        <span class="listing-tag listing-tag-price">Call for Price</span>
+                        <span class="listing-tag-hours">31 hrs</span>
+                    </div>
+                    <div class="listing-body">
+                        <h3>Sea-Doo RXP-X 325HP</h3>
+                        <div class="listing-year">2024 &bull; Ref: AH2424</div>
+                        <div class="listing-includes">
+                            <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Cover</span>
+                            <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> SBS 750 Trailer</span>
+                            <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Full Warranty</span>
+                        </div>
+                        <p class="listing-note">Only 31 hours. Full Sea-Doo warranty until 10th July 2026. Barely broken in.</p>
+                        <div class="listing-footer">
+                            <a href="tel:01273596660" class="btn btn-primary">Call to Enquire</a>
+                            <a href="tel:07780708311" class="btn btn-outline">07780 708311</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listing 3 -->
+                <div class="listing-card reveal">
+                    <div class="listing-img">
+                        <img src="https://lirp.cdn-website.com/13c28227/dms3rep/multi/opt/HARVEY+RXPX-1920w.jpg" alt="Sea-Doo RXP-X 300HP 2022" loading="lazy">
+                        <span class="listing-tag listing-tag-price">Call for Price</span>
+                        <span class="listing-tag-hours">3 hrs</span>
+                    </div>
+                    <div class="listing-body">
+                        <h3>Sea-Doo RXP-X 300HP</h3>
+                        <div class="listing-year">2022 &bull; Ref: AH0634</div>
+                        <div class="listing-includes">
+                            <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Cover</span>
+                            <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> SBS 750 Trailer</span>
+                        </div>
+                        <p class="listing-note">Virtually brand new with only 3 hours on the clock. Incredible opportunity.</p>
+                        <div class="listing-footer">
+                            <a href="tel:01273596660" class="btn btn-primary">Call to Enquire</a>
+                            <a href="tel:07780708311" class="btn btn-outline">07780 708311</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listing 4 -->
+                <div class="listing-card reveal reveal-delay-1">
+                    <div class="listing-img">
+                        <img src="https://lirp.cdn-website.com/13c28227/dms3rep/multi/opt/image0-1920w.jpeg" alt="Sea-Doo Trixx 2UP 2018" loading="lazy">
+                        <span class="listing-tag listing-tag-price">Call for Price</span>
+                        <span class="listing-tag-hours">182 hrs</span>
+                    </div>
+                    <div class="listing-body">
+                        <h3>Sea-Doo Trixx 2UP 90HO</h3>
+                        <div class="listing-year">2018 &bull; Ref: AG4041</div>
+                        <div class="listing-includes">
+                            <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Cover</span>
+                            <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> SBS Bunked Trailer</span>
+                        </div>
+                        <p class="listing-note">Fun, nimble, and perfect for tricks and casual riding.</p>
+                        <div class="listing-footer">
+                            <a href="tel:01273596660" class="btn btn-primary">Call to Enquire</a>
+                            <a href="tel:07780708311" class="btn btn-outline">07780 708311</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listing 5 -->
+                <div class="listing-card reveal">
+                    <div class="listing-img">
+                        <img src="https://lirp.cdn-website.com/13c28227/dms3rep/multi/opt/TRIXX+12+HR-1920w.jpg" alt="Sea-Doo Trixx 3UP 2022" loading="lazy">
+                        <span class="listing-tag listing-tag-price">Call for Price</span>
+                        <span class="listing-tag-hours">11 hrs</span>
+                    </div>
+                    <div class="listing-body">
+                        <h3>Sea-Doo Trixx 3UP 90HO</h3>
+                        <div class="listing-year">2022 &bull; Ref: AH1687</div>
+                        <div class="listing-includes">
+                            <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Cover</span>
+                            <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> SBS Bunked Trailer</span>
+                        </div>
+                        <p class="listing-note">Just 11 hours. 3-seater Trixx with loads of fun built in. Practically new.</p>
+                        <div class="listing-footer">
+                            <a href="tel:01273596660" class="btn btn-primary">Call to Enquire</a>
+                            <a href="tel:07780708311" class="btn btn-outline">07780 708311</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listing 6 -->
+                <div class="listing-card reveal reveal-delay-1">
+                    <div class="listing-img">
+                        <img src="https://lirp.cdn-website.com/13c28227/dms3rep/multi/opt/TRIXX+11HR+copy-1920w.jpeg" alt="Sea-Doo Trixx 2UP 2022" loading="lazy">
+                        <span class="listing-tag listing-tag-price">Call for Price</span>
+                        <span class="listing-tag-hours">11 hrs</span>
+                    </div>
+                    <div class="listing-body">
+                        <h3>Sea-Doo Trixx 2UP 90HO</h3>
+                        <div class="listing-year">2022 &bull; Ref: AG1879</div>
+                        <div class="listing-includes">
+                            <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Cover</span>
+                            <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> SBS Bunked Trailer</span>
+                        </div>
+                        <p class="listing-note">Another near-new Trixx with only 11 hours. Great entry point into watersports.</p>
+                        <div class="listing-footer">
+                            <a href="tel:01273596660" class="btn btn-primary">Call to Enquire</a>
+                            <a href="tel:07780708311" class="btn btn-outline">07780 708311</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Listing 7 -->
+                <div class="listing-card reveal">
+                    <div class="listing-img">
+                        <img src="https://lirp.cdn-website.com/13c28227/dms3rep/multi/opt/AG+6312+SPARK-1920w.jpg" alt="Sea-Doo Spark 2UP 2019" loading="lazy">
+                        <span class="listing-tag listing-tag-price">Call for Price</span>
+                        <span class="listing-tag-hours">17 hrs</span>
+                    </div>
+                    <div class="listing-body">
+                        <h3>Sea-Doo Spark 2UP 90HO</h3>
+                        <div class="listing-year">2019 &bull; Ref: AG6312</div>
+                        <div class="listing-includes">
+                            <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Cover</span>
+                            <span><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> SBS Bunked Trailer</span>
+                        </div>
+                        <p class="listing-note">Only 17 hours on the Spark. Lightweight, fuel-efficient, and ready to ride.</p>
+                        <div class="listing-footer">
+                            <a href="tel:01273596660" class="btn btn-primary">Call to Enquire</a>
+                            <a href="tel:07780708311" class="btn btn-outline">07780 708311</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BROKERAGE INFO -->
+    <section class="brokerage-info">
+        <div class="container">
+            <div class="brokerage-card reveal">
+                <div>
+                    <h3>What is <em>Brokerage</em>?</h3>
+                    <p>The ski is still owned by the customer and we sell it on their behalf. We have pride in our reputation and will not sell any ski that we wouldn't ride ourselves.</p>
+                    <p>Every ski sold is known to us, serviced by us, giving us the confidence to sell it as sold as seen/tested.</p>
+                    <div class="brokerage-points">
+                        <div class="brokerage-point">
+                            <div class="brokerage-point-icon">
+                                <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                            </div>
+                            <p>Every ski serviced and inspected by our workshop</p>
+                        </div>
+                        <div class="brokerage-point">
+                            <div class="brokerage-point-icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <p>Backed by our 24-year reputation</p>
+                        </div>
+                        <div class="brokerage-point">
+                            <div class="brokerage-point-icon">
+                                <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+                            </div>
+                            <p>Finance available on all used Sea-Doos through Santander</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="finance-strip">
+                    <h3>Finance Available</h3>
+                    <p>Spread the cost on any new or used Sea-Doo. Santander Consumer Finance.</p>
+                    <a href="tel:01273596660" class="btn btn-primary">Call for a Quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-left">
+                    <img src="https://lirp-cdn.multiscreensite.com/13c28227/dms3rep/multi/opt/sussex+marine+logo+final+logo+positive+cs2+copy-b5380e38-1280w.png" alt="Sussex Marine Watersports">
+                    <span>&copy; 2025 Sussex Marine Watersports Ltd</span>
+                </div>
+                <div class="footer-right">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="index.html#contact">Contact</a>
+                    <a href="tel:01273596660">01273 596660</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll reveal
+        const revealElements = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+        revealElements.forEach(el => observer.observe(el));
+
+        // Filter buttons (visual only for demo)
+        function filterAll(btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+        }
+
+        // Mobile menu
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            this.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
