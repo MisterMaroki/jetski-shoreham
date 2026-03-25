@@ -1054,22 +1054,19 @@
             border-color: rgba(255, 208, 0, 0.12);
         }
         .team-avatar {
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             margin: 0 auto 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: 'Outfit', sans-serif;
-            font-weight: 700;
-            font-size: 1.5rem;
-            color: var(--deep);
+            overflow: hidden;
+            border: 3px solid rgba(255, 208, 0, 0.15);
         }
-        .team-avatar-1 { background: linear-gradient(135deg, var(--cyan), #0090b3); }
-        .team-avatar-2 { background: linear-gradient(135deg, var(--coral), #e0422a); }
-        .team-avatar-3 { background: linear-gradient(135deg, var(--gold), #f59e0b); }
-        .team-avatar-4 { background: linear-gradient(135deg, #a78bfa, #7c3aed); }
+        .team-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+        }
         .team-card h4 {
             font-family: 'Outfit', sans-serif;
             font-size: 1.1rem;
@@ -2198,25 +2195,25 @@
             </div>
             <div class="team-grid">
                 <div class="team-card reveal">
-                    <div class="team-avatar team-avatar-1">PR</div>
+                    <div class="team-avatar"><img src="https://lirp.cdn-website.com/13c28227/dms3rep/multi/opt/5de14757-5cde-49fc-9c72-6075ab59a8f4-1920w.jpg" alt="Paul Richards" loading="lazy"></div>
                     <h4>Paul Richards</h4>
                     <div class="role">Director &mdash; Tech & Parts</div>
                     <p>Company founder since 2001. Specialises in maintenance, servicing, and keeping your ride running perfectly.</p>
                 </div>
                 <div class="team-card reveal reveal-delay-1">
-                    <div class="team-avatar team-avatar-2">LZ</div>
+                    <div class="team-avatar"><img src="https://lirp.cdn-website.com/13c28227/dms3rep/multi/opt/LAITH-DESK-1920w.jpg" alt="Laith Zaki" loading="lazy"></div>
                     <h4>Laith Zaki</h4>
                     <div class="role">Sales & Office Manager</div>
                     <p>30 years in automotive sales plus a decade in boating. Your go-to for finding the right machine.</p>
                 </div>
                 <div class="team-card reveal reveal-delay-2">
-                    <div class="team-avatar team-avatar-3">CM</div>
+                    <div class="team-avatar"><img src="https://lirp.cdn-website.com/13c28227/dms3rep/multi/opt/CAM-1920w.jpg" alt="Cameron" loading="lazy"></div>
                     <h4>Cameron</h4>
                     <div class="role">General Assistant</div>
                     <p>Handles launching and workshop support. Always on-hand to get you on the water smoothly.</p>
                 </div>
                 <div class="team-card reveal reveal-delay-3">
-                    <div class="team-avatar team-avatar-4">KR</div>
+                    <div class="team-avatar"><img src="https://lirp.cdn-website.com/13c28227/dms3rep/multi/opt/kim-5ca2e14e-1920w.jpg" alt="Kim Rainer" loading="lazy"></div>
                     <h4>Kim Rainer</h4>
                     <div class="role">HR & Accounts</div>
                     <p>Keeps everything running behind the scenes since 2024. The backbone of our operations.</p>
