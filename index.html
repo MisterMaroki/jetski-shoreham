@@ -216,6 +216,17 @@
         .nav-cta::after { display: none !important; }
         .nav-cta svg { stroke: var(--deep); }
         .nav-cta:hover { background: var(--coral-hover) !important; transform: translateY(-1px); }
+        .nav-cta-enquiry {
+            background: transparent !important;
+            border: 1.5px solid var(--coral) !important;
+            color: var(--coral) !important;
+        }
+        .nav-cta-enquiry svg { stroke: var(--coral) !important; }
+        .nav-cta-enquiry:hover {
+            background: var(--coral) !important;
+            color: var(--deep) !important;
+        }
+        .nav-cta-enquiry:hover svg { stroke: var(--deep) !important; }
 
         /* Mobile menu */
         .menu-toggle {
@@ -1680,12 +1691,19 @@
                 top: 72px;
                 left: 0;
                 right: 0;
-                background: rgba(7, 13, 26, 0.98);
+                background: rgba(10, 10, 10, 0.98);
                 backdrop-filter: blur(20px);
                 padding: 24px;
                 gap: 20px;
                 border-bottom: 1px solid rgba(255,255,255,0.06);
                 animation: fadeIn 0.3s;
+            }
+            .nav-links.open .nav-cta,
+            .nav-links.open .nav-cta-enquiry {
+                width: 100%;
+                justify-content: center;
+                padding: 14px 20px;
+                font-size: 0.95rem !important;
             }
             .menu-toggle { display: block; }
             .services-grid { grid-template-columns: 1fr; }
@@ -1733,6 +1751,10 @@
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                     01273 596660
                 </a></li>
+                <li><a href="#" onclick="openEnquiry();return false;" class="nav-cta nav-cta-enquiry">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                    Enquire
+                </a></li>
             </ul>
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
                 <span></span><span></span><span></span>
@@ -1760,10 +1782,10 @@
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                         Call Us Now
                     </a>
-                    <a href="#services" class="btn btn-secondary">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="10 8 16 12 10 16 10 8"></polygon></svg>
-                        Explore Services
-                    </a>
+                    <button onclick="openEnquiry()" class="btn btn-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        Send an Enquiry
+                    </button>
                 </div>
             </div>
         </div>
@@ -2518,10 +2540,10 @@
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                 Call Now
             </a>
-            <a href="mailto:info@jetbikes.com" class="btn btn-cyan">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                Email Us
-            </a>
+            <button onclick="openEnquiry()" class="btn btn-cyan">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                Enquire
+            </button>
         </div>
     </div>
 
